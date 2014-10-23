@@ -1,6 +1,8 @@
 # Strongmail
 
-TODO: Write a gem description
+[![Circle CI](https://circleci.com/gh/wyatt-research/Wyatt-Pro-StrongMail-Client.png?style=badge&circle-token=8d5e9b8f014067cc9dbc5f9c770f50b79044e126)](https://circleci.com/gh/wyatt-research/Wyatt-Pro-StrongMail-Client)
+
+A Ruby client to interact with the Wyatt Research StrongMail API.
 
 ## Installation
 
