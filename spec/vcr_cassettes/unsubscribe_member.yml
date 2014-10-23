@@ -1,0 +1,153 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://192.168.33.10:3000/v1/members/user@example.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Authorization:
+      - Token token="6acbf3171ac7990a84e3c8237a092c4d"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"2b3bee8d8a702597cb81a7f1ba828d5a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3954f6a9-ac11-4d1a-83d2-e29c5159e479
+      X-Runtime:
+      - '0.025392'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Thu, 23 Oct 2014 18:42:29 GMT
+      Content-Length:
+      - '315'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"_meta":{},"_payload":{"id":5,"email":"user@example.com","first_name":"Neil","last_name":"deGrasse
+        Tyson","address1":"1234 Scientist Way","address2":"Ste. 42","city":"Intelligenceville","state":"VT","zip":"12345","country":"USA","work_phone":"555-555-5555","email_status":null,"date_joined":"2014-10-23
+        17:58:32"}}'
+    http_version: 
+  recorded_at: Thu, 23 Oct 2014 18:35:42 GMT
+- request:
+    method: delete
+    uri: http://192.168.33.10:3000/v1/members/user@example.com/subscriptions/something_else
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Authorization:
+      - Token token="6acbf3171ac7990a84e3c8237a092c4d"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 204
+      message: 'No Content '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 41d97b05-b95c-4c7f-845f-4770ad85e529
+      X-Runtime:
+      - '0.011123'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Thu, 23 Oct 2014 18:42:29 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 23 Oct 2014 18:35:42 GMT
+- request:
+    method: get
+    uri: http://192.168.33.10:3000/v1/members/user@example.com/subscriptions/something_else
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Authorization:
+      - Token token="6acbf3171ac7990a84e3c8237a092c4d"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"3f44813e0eae935d661c6bc58f67b2ee"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 486c5426-e5c8-447d-9bef-fe197af30e42
+      X-Runtime:
+      - '0.013203'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Thu, 23 Oct 2014 18:42:29 GMT
+      Content-Length:
+      - '293'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"_meta":{"count":1},"_payload":[{"id":10,"active":false,"member_email":"user@example.com","list":"something_else","date_subscribed":"2014-10-23
+        17:58:32","date_unsubscribed":"2014-10-23 18:35:40","source_ip":"0.0.0.0","unsubscribe_ip":"0.0.0.0","unsubscribe_message_id":0,"complaint":false}]}'
+    http_version: 
+  recorded_at: Thu, 23 Oct 2014 18:35:42 GMT
+recorded_with: VCR 2.9.3
