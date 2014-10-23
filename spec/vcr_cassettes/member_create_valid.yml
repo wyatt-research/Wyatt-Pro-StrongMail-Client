@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://192.168.33.10:3000/v1/members/user@example.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Authorization:
+      - Token token=6acbf3171ac7990a84e3c8237a092c4d
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: 'Not Found '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 5f6f0979-5c6d-4250-a746-566447775e27
+      X-Runtime:
+      - '0.018001'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 22 Oct 2014 19:17:20 GMT
+      Content-Length:
+      - '92'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"_meta":{"message":"User with email user@example.com could not be
+        found."},"_payload":null}'
+    http_version: 
+  recorded_at: Wed, 22 Oct 2014 19:17:20 GMT
+- request:
+    method: post
+    uri: http://192.168.33.10:3000/v1/members
+    body:
+      encoding: UTF-8
+      string: '{"email":"user@example.com"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Authorization:
+      - Token token=6acbf3171ac7990a84e3c8237a092c4d
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: 'Created '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"4f779ba98bc2700a919cad14857313f8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7100f578-0c60-440a-ac3c-55da02d01925
+      X-Runtime:
+      - '0.029576'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Wed, 22 Oct 2014 19:17:20 GMT
+      Content-Length:
+      - '251'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"_meta":{},"_payload":{"id":3,"email":"user@example.com","first_name":null,"last_name":null,"address1":null,"address2":null,"city":null,"state":null,"zip":null,"country":null,"work_phone":null,"email_status":null,"date_joined":"2014-10-22
+        19:17:20"}}'
+    http_version: 
+  recorded_at: Wed, 22 Oct 2014 19:17:20 GMT
+recorded_with: VCR 2.9.3
