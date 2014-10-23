@@ -6,24 +6,32 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'strongmail'
+    gem 'strongmail', github: 'wyatt-research/Wyatt-Pro-StrongMail-Client'
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install strongmail
-
 ## Usage
 
-TODO: Write usage instructions here
+### Configuration
 
-## Contributing
+Before you can make requests to the API you must provide a minimal amount of configuration.
 
-1. Fork it ( https://github.com/[my-github-username]/strongmail/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+```ruby
+require 'strongmail'
+
+Strongmail.configure do |config|
+  config.api_host = 'http://your.smapi.host'
+  config.api_port = 3000
+  config.auth_token = 'my_api_auth_token'
+end
+```
+
+Without at least these configuration values the client will throw errors if you attempt to make any requests.
+
+> We have you specify the api_host and api_port to easily allow this client to be used in test, development, staging, and production environments.
+
+The below examples that detail making calls assume that you have provided valid configuration values.
+
+### Create Member
