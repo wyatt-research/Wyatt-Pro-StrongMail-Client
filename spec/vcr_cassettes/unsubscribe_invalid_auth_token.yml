@@ -35,13 +35,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 479b2485-d304-4f76-9886-b678e8cbc251
+      - ae43043d-1239-420f-8c42-c20ecf594bab
       X-Runtime:
-      - '0.041461'
+      - '0.010470'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Thu, 23 Oct 2014 18:31:29 GMT
+      - Fri, 24 Oct 2014 14:30:16 GMT
       Content-Length:
       - '59'
       Connection:
@@ -50,5 +50,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"_meta":{"message":"Unauthorized Access"},"_payload":null}'
     http_version: 
-  recorded_at: Thu, 23 Oct 2014 18:24:41 GMT
+  recorded_at: Fri, 24 Oct 2014 14:30:17 GMT
 recorded_with: VCR 2.9.3

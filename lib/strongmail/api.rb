@@ -7,10 +7,8 @@ module Strongmail
 
     def initialize(base_url, auth_token)
       guard_api_configuration base_url, auth_token
-      @base_url = base_url
-      @auth_token = auth_token
-      @conn = Faraday.new(url: @base_url)
-      @conn.token_auth @auth_token
+      @conn = Faraday.new(url: base_url)
+      @conn.token_auth auth_token
     end
 
     def fetch_member(email)
