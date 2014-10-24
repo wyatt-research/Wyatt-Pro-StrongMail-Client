@@ -6,10 +6,10 @@ require 'strongmail/version'
 Gem::Specification.new do |spec|
   spec.name          = "strongmail"
   spec.version       = Strongmail::VERSION
-  spec.authors       = ["Charles Sprayberry"]
+  spec.authors       = ["Whyatt Research"]
   spec.email         = ["charles.sprayberry@wyattresearch.com"]
   spec.summary       = "Strongmail API Client"
-  spec.description   = ""
+  spec.description   = "A Ruby client to facilitate making HTTP calls to the Wyatt Research StrongMail API"
   spec.homepage      = ""
   spec.license       = "Proprietary"
 
