@@ -6,7 +6,7 @@ require 'strongmail/version'
 Gem::Specification.new do |spec|
   spec.name          = "strongmail"
   spec.version       = Strongmail::VERSION
-  spec.authors       = ["Whyatt Research"]
+  spec.authors       = ["Wyatt Research"]
   spec.email         = ["charles.sprayberry@wyattresearch.com"]
   spec.summary       = "Strongmail API Client"
   spec.description   = "A Ruby client to facilitate making HTTP calls to the Wyatt Research StrongMail API"
@@ -14,7 +14,6 @@ Gem::Specification.new do |spec|
   spec.license       = "Proprietary"
 
   spec.files         = `git ls-files -z`.split("\x0")
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
