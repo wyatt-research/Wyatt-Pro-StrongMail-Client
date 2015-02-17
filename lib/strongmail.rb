@@ -45,15 +45,15 @@ module Strongmail
 
   class Configuration
 
-    attr_accessor :auth_token, :environment, :api_host, :api_port
+    attr_accessor :auth_token, :environment, :api_host
 
     def initialize
       @environment = :development
     end
 
     def base_url
-      return nil if api_host.nil? || api_port.nil?
-      "#{@api_host}:#{@api_port}/v1"
+      return nil if api_host.nil?
+      "#{@api_host}/v1"
     end
 
   end

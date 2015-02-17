@@ -26,26 +26,14 @@ RSpec.describe Strongmail::Configuration do
     end
   end
 
-  describe "#api_port" do
-    it "defaults to nil" do
-      expect(@config.api_port).to be_nil
-    end
-
-    it "can set value" do
-      @config.api_port = 3000
-      expect(@config.api_port).to eq 3000
-    end
-  end
-
   describe "#base_url" do
     it "defaults to nil" do
       expect(@config.base_url).to be_nil
     end
 
-    it "determines value from api_host and api_port" do
+    it "determines value from api_host" do
       @config.api_host = 'http://localhost'
-      @config.api_port = 3000
-      expect(@config.base_url).to eq 'http://localhost:3000/v1'
+      expect(@config.base_url).to eq 'http://localhost/v1'
     end
   end
 end
