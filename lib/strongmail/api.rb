@@ -35,6 +35,21 @@ module Strongmail
         Strongmail::Member.new body['_payload']
     end
 
+    def change_email_member(member)
+      raise Strongmail::BadRequestError.new("To update a member email you must pass a Strongmail::Member object") if !member.is_a?(Strongmail::Member)
+
+      response = @conn.patch do |req|
+        prepare_request req
+        req.url "members/#{member.email}/change_email"
+        req.body = get_member_email_attr(member).to_json
+      end
+
+      body = JSON.parse response.body
+      guard_error_response response, body
+
+      Strongmail::Member.new body['_payload']
+    end
+
     def update_member(member)
       raise Strongmail::BadRequestError.new("To update a member you must pass a Strongmail::Member object") if !member.is_a?(Strongmail::Member)
 
@@ -121,6 +136,12 @@ module Strongmail
         :zip => member.zip,
         :country => member.country,
         :work_phone => member.work_phone
+      }
+    end
+
+    def get_member_email_attr(member)
+      {
+        :email => member.email
       }
     end
 
