@@ -40,7 +40,7 @@ module Strongmail
 
       response = @conn.patch do |req|
         prepare_request req
-        req.url "members/#{member.email}"
+        req.url "members/#{member.id}"
         req.body = get_member_update_attr(member).to_json
       end
 
@@ -112,6 +112,7 @@ module Strongmail
 
     def get_member_update_attr(member)
       {
+        :email=> member.email,
         :first_name => member.first_name,
         :last_name => member.last_name,
         :address1 => member.address1,

@@ -17,11 +17,11 @@ module Strongmail
   class Member < Resource
 
     # Readonly Proprties
-    def_delegators :@data, :id, :email, :email_status
-    def_delegators :guard_readonly_property, :id=, :email=, :date_joined=, :email_status=
+    def_delegators :@data, :id, :email_status
+    def_delegators :guard_readonly_property, :id=, :date_joined=, :email_status=
 
     # Read and Write Properties
-    def_delegators :@data, :first_name, :first_name=, :last_name, :last_name=,
+    def_delegators :@data, :email, :email=, :first_name, :first_name=, :last_name, :last_name=,
                            :address1, :address1=, :address2, :address2=, :city, :city=,
                            :state, :state=, :zip, :zip=, :country, :country=, :work_phone, :work_phone=
 
