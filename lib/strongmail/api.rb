@@ -133,7 +133,7 @@ module Strongmail
     def guard_error_response(response, body)
       case response.status
       when 400
-        raise Strongmail::BadRequestError.new body['_meta']['message']
+        raise Strongmail::BadRequestError.new body['_payload'].join ", "
       when 401
         raise Strongmail::ConfigurationError.new "The auth_token provided is invalid"
       when 404
