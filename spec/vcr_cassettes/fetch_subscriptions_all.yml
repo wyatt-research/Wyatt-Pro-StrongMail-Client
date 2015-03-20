@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: http://192.168.33.10:3000/v1/members/user@example.com
+    uri: http://192.168.33.10:8181/v1/members/user@example.com
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.0
+      - Faraday v0.9.1
       Authorization:
-      - Token token="6acbf3171ac7990a84e3c8237a092c4d"
+      - Token token="b15916572f150bd8a665e27b1f5b69b8"
       Accept:
       - application/json
       Content-Type:
@@ -31,39 +31,39 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"ab8840b8fc2262dafaef824e948b459d"'
+      - '"b0a2319f43b6b358d0f4f4ab5cb87756"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1ab2aac4-e65b-4246-828d-c37546345e14
+      - e2cfb95b-28ba-4533-a26c-77050582a569
       X-Runtime:
-      - '0.010438'
+      - '0.015439'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Fri, 24 Oct 2014 14:30:16 GMT
+      - Wed, 18 Mar 2015 13:44:29 GMT
       Content-Length:
       - '315'
       Connection:
       - Keep-Alive
     body:
       encoding: UTF-8
-      string: '{"_meta":{},"_payload":{"id":6,"email":"user@example.com","first_name":"Neil","last_name":"deGrasse
-        Tyson","address1":"1234 Scientist Way","address2":"Ste. 42","city":"Intelligenceville","state":"VT","zip":"12345","country":"USA","work_phone":"555-555-5555","email_status":null,"date_joined":"2014-10-24
-        14:30:15"}}'
+      string: '{"_meta":{},"_payload":{"id":3,"email":"user@example.com","first_name":"Neil","last_name":"deGrasse
+        Tyson","address1":"1234 Scientist Way","address2":"Ste. 42","city":"Intelligenceville","state":"VT","zip":"12345","country":"USA","work_phone":"555-555-5555","email_status":null,"date_joined":"2015-03-18
+        13:44:29"}}'
     http_version: 
-  recorded_at: Fri, 24 Oct 2014 14:30:17 GMT
+  recorded_at: Wed, 18 Mar 2015 13:44:29 GMT
 - request:
     method: get
-    uri: http://192.168.33.10:3000/v1/members/user@example.com/subscriptions
+    uri: http://192.168.33.10:8181/v1/members/user@example.com/subscriptions
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.0
+      - Faraday v0.9.1
       Authorization:
-      - Token token="6acbf3171ac7990a84e3c8237a092c4d"
+      - Token token="b15916572f150bd8a665e27b1f5b69b8"
       Accept:
       - application/json
       Content-Type:
@@ -84,27 +84,27 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"db3e1c3dbb408d0c1d91d3a2818e2f29"'
+      - '"b897e70231d39f4e09304921a84a95ce"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ee50a879-7942-4631-9395-271d4e1d02b9
+      - 0beec045-43a6-4857-a215-a4c876718667
       X-Runtime:
-      - '0.015912'
+      - '0.020639'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Fri, 24 Oct 2014 14:30:16 GMT
+      - Wed, 18 Mar 2015 13:44:29 GMT
       Content-Length:
-      - '741'
+      - '738'
       Connection:
       - Keep-Alive
     body:
       encoding: UTF-8
-      string: '{"_meta":{"count":3},"_payload":[{"id":11,"active":true,"member_email":"user@example.com","list":"foo","date_subscribed":"2014-10-24
-        14:30:15","date_unsubscribed":null,"source_ip":"0.0.0.0","unsubscribe_ip":"0.0.0.0","unsubscribe_message_id":0,"complaint":false},{"id":12,"active":true,"member_email":"user@example.com","list":"foo_offer","date_subscribed":"2014-10-24
-        14:30:15","date_unsubscribed":null,"source_ip":"0.0.0.0","unsubscribe_ip":"0.0.0.0","unsubscribe_message_id":0,"complaint":false},{"id":13,"active":true,"member_email":"user@example.com","list":"something_else","date_subscribed":"2014-10-24
-        14:30:15","date_unsubscribed":null,"source_ip":"0.0.0.0","unsubscribe_ip":"0.0.0.0","unsubscribe_message_id":0,"complaint":false}]}'
+      string: '{"_meta":{"count":3},"_payload":[{"id":3,"active":true,"member_email":"user@example.com","list":"foo","date_subscribed":"2015-03-18
+        13:44:29","date_unsubscribed":null,"source_ip":"0.0.0.0","unsubscribe_ip":"0.0.0.0","unsubscribe_message_id":0,"complaint":false},{"id":4,"active":true,"member_email":"user@example.com","list":"foo_offer","date_subscribed":"2015-03-18
+        13:44:29","date_unsubscribed":null,"source_ip":"0.0.0.0","unsubscribe_ip":"0.0.0.0","unsubscribe_message_id":0,"complaint":false},{"id":5,"active":true,"member_email":"user@example.com","list":"something_else","date_subscribed":"2015-03-18
+        13:44:29","date_unsubscribed":null,"source_ip":"0.0.0.0","unsubscribe_ip":"0.0.0.0","unsubscribe_message_id":0,"complaint":false}]}'
     http_version: 
-  recorded_at: Fri, 24 Oct 2014 14:30:17 GMT
+  recorded_at: Wed, 18 Mar 2015 13:44:29 GMT
 recorded_with: VCR 2.9.3

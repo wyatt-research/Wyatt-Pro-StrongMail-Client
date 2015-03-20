@@ -40,7 +40,7 @@ module Strongmail
 
       response = @conn.patch do |req|
         prepare_request req
-        req.url "members/#{member.email}"
+        req.url "members/#{member.id}"
         req.body = get_member_update_attr(member).to_json
       end
 
@@ -112,6 +112,7 @@ module Strongmail
 
     def get_member_update_attr(member)
       {
+        :email=> member.email,
         :first_name => member.first_name,
         :last_name => member.last_name,
         :address1 => member.address1,
@@ -132,7 +133,7 @@ module Strongmail
     def guard_error_response(response, body)
       case response.status
       when 400
-        raise Strongmail::BadRequestError.new body['_meta']['message']
+        raise Strongmail::BadRequestError.new body['_payload'].join ", "
       when 401
         raise Strongmail::ConfigurationError.new "The auth_token provided is invalid"
       when 404

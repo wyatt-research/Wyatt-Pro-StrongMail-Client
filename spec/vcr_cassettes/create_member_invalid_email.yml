@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: post
-    uri: http://192.168.33.10:3000/v1/members
+    uri: http://192.168.33.10:8181/v1/members
     body:
       encoding: UTF-8
       string: '{"email":"this_is_a_bad_email"}'
     headers:
       User-Agent:
-      - Faraday v0.9.0
+      - Faraday v0.9.1
       Authorization:
-      - Token token="6acbf3171ac7990a84e3c8237a092c4d"
+      - Token token="b15916572f150bd8a665e27b1f5b69b8"
       Accept:
       - application/json
       Content-Type:
@@ -33,13 +33,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - ee735751-1534-4136-b36e-9c93b84140c0
+      - a2ba74b2-bd09-4a00-a8db-eebf92f6f432
       X-Runtime:
-      - '0.034829'
+      - '0.040476'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Fri, 24 Oct 2014 14:30:15 GMT
+      - Wed, 18 Mar 2015 13:44:29 GMT
       Content-Length:
       - '134'
       Connection:
@@ -49,5 +49,5 @@ http_interactions:
       string: '{"_meta":{"message":"There was an error validating one or more attributes
         for the requested member."},"_payload":["Email is invalid"]}'
     http_version: 
-  recorded_at: Fri, 24 Oct 2014 14:30:16 GMT
+  recorded_at: Wed, 18 Mar 2015 13:44:29 GMT
 recorded_with: VCR 2.9.3

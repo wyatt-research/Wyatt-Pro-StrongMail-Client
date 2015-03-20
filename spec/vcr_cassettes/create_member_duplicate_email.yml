@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: post
-    uri: http://192.168.33.10:3000/v1/members
+    uri: http://192.168.33.10:8181/v1/members
     body:
       encoding: UTF-8
       string: '{"email":"user@example.com"}'
     headers:
       User-Agent:
-      - Faraday v0.9.0
+      - Faraday v0.9.1
       Authorization:
-      - Token token="6acbf3171ac7990a84e3c8237a092c4d"
+      - Token token="b15916572f150bd8a665e27b1f5b69b8"
       Accept:
       - application/json
       Content-Type:
@@ -33,13 +33,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 0b1ec4d6-b649-4e36-be06-637829044ee0
+      - f7923a25-e9e7-4659-9177-6b686c5d0a2c
       X-Runtime:
-      - '0.011353'
+      - '0.018081'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Fri, 24 Oct 2014 14:30:15 GMT
+      - Wed, 18 Mar 2015 13:44:29 GMT
       Content-Length:
       - '80'
       Connection:
@@ -48,5 +48,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"_meta":{"message":"A member with that email already exists."},"_payload":null}'
     http_version: 
-  recorded_at: Fri, 24 Oct 2014 14:30:16 GMT
+  recorded_at: Wed, 18 Mar 2015 13:44:29 GMT
 recorded_with: VCR 2.9.3

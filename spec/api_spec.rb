@@ -90,9 +90,9 @@ RSpec.describe Strongmail::API do
 
     it "throws error if member not found" do
       VCR.use_cassette('update_member_not_found') do
-        member = Strongmail::Member.new(email: 'not_found@example.com')
+        member = Strongmail::Member.new(id: 992) #any id that does not exist
         api = Strongmail::API.new(@base_url, @test_auth_token)
-        expect { api.update_member(member) }.to raise_error(Strongmail::NotFoundError, 'User with email not_found@example.com could not be found.')
+        expect { api.update_member(member) }.to raise_error(Strongmail::NotFoundError, 'User with id 992 could not be found.')
       end
     end
 

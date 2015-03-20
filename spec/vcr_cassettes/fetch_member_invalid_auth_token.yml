@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://192.168.33.10:3000/v1/members/user@test.com
+    uri: http://192.168.33.10:8181/v1/members/user@test.com
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.0
+      - Faraday v0.9.1
       Authorization:
       - Token token="not a valid token"
       Accept:
@@ -35,13 +35,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 03f7b02b-7501-4c52-97fd-cff6c5a4e58d
+      - a14e4156-3e92-47d0-b54c-db86dbcc363b
       X-Runtime:
-      - '0.009429'
+      - '0.013334'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Fri, 24 Oct 2014 14:30:15 GMT
+      - Wed, 18 Mar 2015 13:44:29 GMT
       Content-Length:
       - '59'
       Connection:
@@ -50,5 +50,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"_meta":{"message":"Unauthorized Access"},"_payload":null}'
     http_version: 
-  recorded_at: Fri, 24 Oct 2014 14:30:16 GMT
+  recorded_at: Wed, 18 Mar 2015 13:44:29 GMT
 recorded_with: VCR 2.9.3

@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: http://192.168.33.10:3000/v1/members/user@example.com
+    uri: http://192.168.33.10:8181/v1/members/user@example.com
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.0
+      - Faraday v0.9.1
       Authorization:
-      - Token token="6acbf3171ac7990a84e3c8237a092c4d"
+      - Token token="b15916572f150bd8a665e27b1f5b69b8"
       Accept:
       - application/json
       Content-Type:
@@ -31,39 +31,39 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"e64d543d7cd97a0d9b671020d34394cc"'
+      - '"5462948c00e0bf487389971fda285304"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c7d436bf-f2da-4b97-99f9-1aed855762ce
+      - 0aa689cf-f245-4ba1-851f-09473aaeb638
       X-Runtime:
-      - '0.011431'
+      - '0.019722'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Fri, 24 Oct 2014 14:30:15 GMT
+      - Wed, 18 Mar 2015 13:44:29 GMT
       Content-Length:
       - '253'
       Connection:
       - Keep-Alive
     body:
       encoding: UTF-8
-      string: '{"_meta":{},"_payload":{"id":6,"email":"user@example.com","first_name":"Jon","last_name":"Doe","address1":null,"address2":null,"city":null,"state":null,"zip":null,"country":null,"work_phone":null,"email_status":null,"date_joined":"2014-10-24
-        14:30:15"}}'
+      string: '{"_meta":{},"_payload":{"id":3,"email":"user@example.com","first_name":"Jon","last_name":"Doe","address1":null,"address2":null,"city":null,"state":null,"zip":null,"country":null,"work_phone":null,"email_status":null,"date_joined":"2015-03-18
+        13:44:29"}}'
     http_version: 
-  recorded_at: Fri, 24 Oct 2014 14:30:16 GMT
+  recorded_at: Wed, 18 Mar 2015 13:44:29 GMT
 - request:
     method: patch
-    uri: http://192.168.33.10:3000/v1/members/user@example.com
+    uri: http://192.168.33.10:8181/v1/members/3
     body:
       encoding: UTF-8
-      string: '{"first_name":"Neil","last_name":"deGrasse Tyson","address1":"1234
-        Scientist Way","address2":"Ste. 42","city":"Intelligenceville","state":"VT","zip":"12345","country":"USA","work_phone":"555-555-5555"}'
+      string: '{"email":"user@example.com","first_name":"Neil","last_name":"deGrasse
+        Tyson","address1":"1234 Scientist Way","address2":"Ste. 42","city":"Intelligenceville","state":"VT","zip":"12345","country":"USA","work_phone":"555-555-5555"}'
     headers:
       User-Agent:
-      - Faraday v0.9.0
+      - Faraday v0.9.1
       Authorization:
-      - Token token="6acbf3171ac7990a84e3c8237a092c4d"
+      - Token token="b15916572f150bd8a665e27b1f5b69b8"
       Accept:
       - application/json
       Content-Type:
@@ -84,26 +84,26 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"ab8840b8fc2262dafaef824e948b459d"'
+      - '"b0a2319f43b6b358d0f4f4ab5cb87756"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9460d4a6-1c01-4bb4-bc5a-a872e00963d2
+      - 336fe524-2798-444b-b090-a36edbd3c409
       X-Runtime:
-      - '0.022497'
+      - '0.039630'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Fri, 24 Oct 2014 14:30:15 GMT
+      - Wed, 18 Mar 2015 13:44:29 GMT
       Content-Length:
       - '315'
       Connection:
       - Keep-Alive
     body:
       encoding: UTF-8
-      string: '{"_meta":{},"_payload":{"id":6,"email":"user@example.com","first_name":"Neil","last_name":"deGrasse
-        Tyson","address1":"1234 Scientist Way","address2":"Ste. 42","city":"Intelligenceville","state":"VT","zip":"12345","country":"USA","work_phone":"555-555-5555","email_status":null,"date_joined":"2014-10-24
-        14:30:15"}}'
+      string: '{"_meta":{},"_payload":{"id":3,"email":"user@example.com","first_name":"Neil","last_name":"deGrasse
+        Tyson","address1":"1234 Scientist Way","address2":"Ste. 42","city":"Intelligenceville","state":"VT","zip":"12345","country":"USA","work_phone":"555-555-5555","email_status":null,"date_joined":"2015-03-18
+        13:44:29"}}'
     http_version: 
-  recorded_at: Fri, 24 Oct 2014 14:30:16 GMT
+  recorded_at: Wed, 18 Mar 2015 13:44:29 GMT
 recorded_with: VCR 2.9.3

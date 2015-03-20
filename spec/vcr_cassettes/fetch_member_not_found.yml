@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: http://192.168.33.10:3000/v1/members/not_found@example.com
+    uri: http://192.168.33.10:8181/v1/members/not_found@example.com
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.0
+      - Faraday v0.9.1
       Authorization:
-      - Token token="6acbf3171ac7990a84e3c8237a092c4d"
+      - Token token="b15916572f150bd8a665e27b1f5b69b8"
       Accept:
       - application/json
       Content-Type:
@@ -33,13 +33,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - ea5a4332-1062-45e2-be20-c5124ac8936e
+      - 7cda7227-9b99-4958-b9f4-66fd62ba17af
       X-Runtime:
-      - '0.010480'
+      - '0.015607'
       Server:
       - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
       Date:
-      - Fri, 24 Oct 2014 14:30:15 GMT
+      - Wed, 18 Mar 2015 13:44:29 GMT
       Content-Length:
       - '97'
       Connection:
@@ -49,5 +49,5 @@ http_interactions:
       string: '{"_meta":{"message":"User with email not_found@example.com could not
         be found."},"_payload":null}'
     http_version: 
-  recorded_at: Fri, 24 Oct 2014 14:30:16 GMT
+  recorded_at: Wed, 18 Mar 2015 13:44:29 GMT
 recorded_with: VCR 2.9.3

@@ -22,8 +22,9 @@ RSpec.describe Strongmail::Member do
         expect(member.email).to eq 'test@example.com'
       end
 
-      it "throws error on email write" do
-        expect { member.email = 'something else' }.to raise_error(Strongmail::ImmutablePropertyError, 'You may not change that Member attribute')
+      it "email write works successfully" do
+        member.email = 'abc@example.com'
+        expect(member.email).to eq('abc@example.com')
       end
     end
 
